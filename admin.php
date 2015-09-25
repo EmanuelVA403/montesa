@@ -77,6 +77,8 @@ $errorMsg = "";
 								<nav class="nav-primary hidden-xs">
 									<ul class="nav">
 										<li> <a href="admin.php?m=clientes"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
+										<li> <a href="admin.php?m=ventas"> <i class="fa fa-angle-right"></i> <span>Ventas</span> </a> </li>
+										<li> <a href="admin.php?m="> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
 											</ul>
 										</li>
 									</ul>
