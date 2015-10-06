@@ -14,9 +14,11 @@
 		<table class="table table-striped b-t b-light">
 			<thead>
 				<tr>
-					<th width="150">Privilegios</th>
+					<!-- <th width="150">Privilegios</th> -->
 					<th>Nombre Completo</th>
 					<th width="200">Usuario</th>
+					<th> Tipo </th>
+					<th> sucursal</th>
 					<th width= "150">Ultimo Acceso</th>
 					<th width="120"></th>
 				</tr>
@@ -30,7 +32,7 @@
 
 			$query = mysql_query("SELECT * FROM usuarios ORDER BY nombre ASC") or die( mysql_error() );
 			while($q = mysql_fetch_object($query)){
-				switch ($q->privilegio) {
+				/*switch ($q->tipo_usuario) {
 					case 1:
 						$privilegio = "Administrador";
 					break;
@@ -40,19 +42,20 @@
 					case 3:
 						$privilegio = "Diseñador";
 					break;
-				}
+				}*/
 ?>
 				<tr>
-					<td><?php echo $privilegio; ?></td>
+					
 					<td><?php echo $q->nombre; ?></td>
-					<td><?php echo $q->usuario; ?></td>
+					<td><?php echo $q->login; ?></td>
+					<td><?php echo $q->tipo_usuario; ?></td>
+					<td><?php echo $q->sucursal; ?></td>
 					<td>
 						<small><?php echo $q->ingreso; ?></small><br>
-						<small><?php echo $q->ip; ?></small>
 					</td>
 					<td>
-						<a href="admin.php?m=usuariosEditar&id=<?php echo $q->idusuario; ?>" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
-						<a href="admin.php?m=usuarios&del=<?php echo $q->idusuario; ?>" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=usuariosEditar&id=<?php echo $q->id_usuario; ?>" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=usuarios&del=<?php echo $q->id_usuario; ?>" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>
 <?php

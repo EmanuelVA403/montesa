@@ -6,24 +6,43 @@
 #	die;
 #}
 
-#include 'db.php';
+include 'db.php';
 
 if ( isset($_GET['m']) ){
 	switch($_GET['m']) {
 
 		/* clientes */
-		case "clientes":
-			$paginaPHP = "php/clientes.php";
+		case "usuarios":
+			$paginaPHP = "php/usuarios.php";
 		break;
-		case "clientesAgregar":
-			$paginaPHP = "php/clientesAgregar.php";
+		case "usuariosAgregar":
+			$paginaPHP = "php/usuariosAgregar.php";
 		break;
-		case "clientesEditar":
-			$paginaPHP = "php/clientesEditar.php";
+		case "usuariosEditar":
+			$paginaPHP = "php/usuariosEditar.php";
 		break;
-		case "clientesVer":
-			$paginaPHP = "php/clientesVer.php";
+		case "usuariosVer":
+			$paginaPHP = "php/usuariosVer.php";
 		break;
+		case "ventas":
+			$paginaPHP = "php/ventas.php";
+			break;
+		case "ventasAgregar":
+			$paginaPHP ="php/ventasAgregar.php";
+			break;
+		case "ventasEditar":
+			$paginaPHP ="php/ventasAgregar.php";
+			break;
+		case "stock":
+			$paginaPHP = "php/stock.php";
+			break;
+			case "stockAgregar":
+			$paginaPHP ="php/stockAgregar.php";
+			break;
+		case "stockEditar":
+			$paginaPHP ="php/stockAgregar.php";
+			break;
+			
 
 
 	}
@@ -53,7 +72,7 @@ $errorMsg = "";
 		<header class="bg-black dk header navbar navbar-fixed-top-xs">
 			<div class="navbar-header aside-md">
 				<a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
-				<a href="#" class="navbar-brand" data-toggle="fullscreen">Graphix</a>
+				<a href="#" class="navbar-brand" data-toggle="fullscreen">Montesa</a>
 				<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a>
 			</div>
 			<ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user">
@@ -76,9 +95,9 @@ $errorMsg = "";
 								<!-- nav -->
 								<nav class="nav-primary hidden-xs">
 									<ul class="nav">
-										<li> <a href="admin.php?m=clientes"> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
+										<li> <a href="admin.php?m=usuarios"> <i class="fa fa-angle-right"></i> <span>Usuarios</span> </a> </li>
 										<li> <a href="admin.php?m=ventas"> <i class="fa fa-angle-right"></i> <span>Ventas</span> </a> </li>
-										<li> <a href="admin.php?m="> <i class="fa fa-angle-right"></i> <span>Clientes</span> </a> </li>
+										<li> <a href="admin.php?m=stock"> <i class="fa fa-angle-right"></i> <span>Stock</span> </a> </li>
 											</ul>
 										</li>
 									</ul>

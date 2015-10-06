@@ -4,7 +4,7 @@
 	
 	<div class="row wrapper">
 		<div class="col-sm-2 m-b-xs">
-			<a href="admin.php?m=stockAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Registrar Objeto </a>
+			<a href="admin.php?m=stockAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Registrar Artículo </a>
 		</div>
 		<div class="col-sm-7 m-b-xs text-center">
 			<a href="admin.php?m=requisicion" class="btn btn-warning btn-sm"><i class="fa fa-shopping-cart"> Requisicion</i></a>&nbsp;
@@ -34,7 +34,7 @@
 <?php
 			if ( isset($_GET['del']) ){
 				$del = mysql_real_escape_string($_GET['del']);
-				mysql_query("DELETE FROM stock WHERE idstock='".$del."'");
+				mysql_query("DELETE FROM stock WHERE id_stock='".$del."'");
 			}
 
 			if ( isset($_GET['buscar']) ){
@@ -61,7 +61,7 @@ else if (@$_GET['pag'] == "0")
 	$page = 1;
 else 
 	$page = 1;
-
+/*echo $consulta;*/
 $num_rows 		= mysql_num_rows(mysql_query($consulta));
 $lastpage		= ceil($num_rows / $rows_per_page);    		
 $page     = (int)$page;
@@ -88,7 +88,7 @@ $consulta = mysql_query($consulta);
 					<td><?php echo $q->marca; ?></td>
 					<td><?php echo $q->tipo; ?></td>
 
-					<td><?php echo ($bandera)?'<a Style="color:red !important;" class="btn btn-sm btn-default" href="admin.php?m=stockAgregar&id='.$q->idstock.'">':''; ?>
+					<td><?php echo ($bandera)?'<a Style="color:red !important;" class="btn btn-sm btn-default" href="admin.php?m=stockAgregar&id='.$q->id_stock.'">':''; ?>
 						<?php echo $q->stock;
 						echo ($bandera)?' &nbsp;&nbsp;<i  class="fa fa-truck icon"></i></a>':''; 
 						 ?>
@@ -98,8 +98,8 @@ $consulta = mysql_query($consulta);
 					<td><?php echo $q->precio; ?></td>
 					<td><?php echo $q->precioventa; ?></td>
 					<td>
-						<a href="admin.php?m=stockEditar&id=<?php echo $q->idstock; ?>" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
-						<a href="admin.php?m=stock&del=<?php echo $q->idstock; ?>" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
+						<a href="admin.php?m=stockEditar&id=<?php echo $q->id_stock; ?>" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
+						<a href="admin.php?m=stock&del=<?php echo $q->id_stock; ?>" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
 				</tr>			
 <?php

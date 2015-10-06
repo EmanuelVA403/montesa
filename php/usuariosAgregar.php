@@ -39,7 +39,7 @@ if ( isset($_POST['nombre']) ){
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label class="col-lg-3 control-label">Privilegios</label>
+								<label class="col-lg-3 control-label">Tipo usuario(cargo)</label>
 								<div class="col-lg-9">
 									<select name="privilegio" id="option" class="form-control">
 										<option value="1">Administrador</option>
