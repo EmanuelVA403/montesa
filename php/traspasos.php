@@ -1,4 +1,9 @@
 <section class="panel panel-default pos-rlt clearfix">
+	<style >
+	.hiddenRow {
+    padding: 0 !important;
+	}
+	</style>
 
 	<header class="panel-heading"> <i class="fa  "></i> Traspasos </header>
 
@@ -92,7 +97,7 @@ $consulta = mysql_query($consulta);
 				$bandera = ($stock <= 5);
 
 ?>
-				<tr title="Volver a Ordenar" <?php echo ($bandera)?'Style="color:red;"':'Style="color:black"' ?>>
+				<tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle" title="Volver a Ordenar" <?php echo ($bandera)?'Style="color:red;"':'Style="color:black"' ?>>
 					<td><?php echo $q->nombre; ?></td>
 					<td><?php echo $q->marca; ?></td>
 					<td><?php echo $q->tipo; ?></td>
@@ -112,7 +117,12 @@ $consulta = mysql_query($consulta);
 						<a href="admin.php?m=stockEditar&id=<?php echo $q->id_producto; ?>" class="btn btn-sm btn-default"> <i class="fa fa-pencil"></i> </a> &nbsp;&nbsp;&nbsp;
 						<a href="admin.php?m=stock&del=<?php echo $q->id_producto; ?>" class="btn btn-sm btn-danger"> <i class="fa fa-times"></i> </a>
 					</td>
-				</tr>			
+				</tr>
+				<tr >
+						<td colspan="6" class="hiddenRow">
+						<div class="accordian-body collapse" id="demo1"> Demo1 </div> 
+				</td>
+</tr>			
 <?php
 			}
 ?>
