@@ -39,6 +39,9 @@ if ( isset($_GET['m']) ){
 			case "stockAgregar":
 			$paginaPHP ="php/stockAgregar.php";
 			break;
+		case "traspasos":
+			$paginaPHP ="php/traspasos.php";
+			break;
 		case "stockEditar":
 			$paginaPHP ="php/stockAgregar.php";
 			break;
@@ -69,13 +72,14 @@ $errorMsg = "";
 </head>
 <body class="">
 	<section class="vbox">
-		<header class="bg-black dk header navbar navbar-fixed-top-xs">
+		<header class="bg-azul dk header navbar navbar-fixed-top-xs">
 			<div class="navbar-header aside-md">
 				<a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
 				<a href="#" class="navbar-brand" data-toggle="fullscreen">Montesa</a>
 				<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a>
 			</div>
 			<ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user">
+
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="images/avatar_default.jpg"> </span> admin <b class="caret"></b> </a>
 					<ul class="dropdown-menu animated fadeInRight"> <span class="arrow top"></span> 
@@ -88,7 +92,7 @@ $errorMsg = "";
 		<section>
 			<section class="hbox stretch">
 				<!-- .aside -->
-				<aside class="bg-black lter aside-md hidden-print hidden-xs" id="nav">
+				<aside class="bg lter aside-md hidden-print hidden-xs" id="nav">
 					<section class="vbox">
 						<section class="w-f scrollable">
 							<div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#333333">
@@ -96,8 +100,10 @@ $errorMsg = "";
 								<nav class="nav-primary hidden-xs">
 									<ul class="nav">
 										<li> <a href="admin.php?m=usuarios"> <i class="fa fa-angle-right"></i> <span>Usuarios</span> </a> </li>
-										<li> <a href="admin.php?m=ventas"> <i class="fa fa-angle-right"></i> <span>Ventas</span> </a> </li>
 										<li> <a href="admin.php?m=stock"> <i class="fa fa-angle-right"></i> <span>Stock</span> </a> </li>
+										<li> <a href="admin.php?m=sucursal"> <i class="fa fa-angle-right"></i> <span>Sucursal</span> </a> </li>
+										<li> <a href="admin.php?m=traspasos"> <i class="fa fa-angle-right"></i> <span>Traspasos</span> </a> </li>
+										<li> <a href="admin.php?m=ventas"> <i class="fa fa-angle-right"></i> <span>Ventas</span> </a> </li>
 											</ul>
 										</li>
 									</ul>

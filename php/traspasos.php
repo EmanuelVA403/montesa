@@ -1,11 +1,11 @@
 <section class="panel panel-default pos-rlt clearfix">
 
-	<header class="panel-heading"> <i class="fa  "></i> Stock </header>
+	<header class="panel-heading"> <i class="fa  "></i> Traspasos </header>
 
 	
 	<div class="row wrapper">
 		<div class="col-sm-2 m-b-xs">
-			<a href="admin.php?m=stockAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Registrar Artículo </a>
+			<!-- <a href="admin.php?m=stockAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Registrar Artículo </a> -->
 		</div>
 		<div class="col-sm-7 m-b-xs text-center">
 			<a href="admin.php?m=requisicion" class="btn btn-warning btn-sm"><i class="fa fa-shopping-cart"> Requisicion</i></a>&nbsp;
@@ -13,7 +13,8 @@
 		</div>
 		<div class="col-sm-3">
 			<div class="input-group">
-				<input type="text" class="input-sm form-control" placeholder="Buscar"> <span class="input-group-btn"> <button class="btn btn-sm btn-default" type="button"> <i class="fa fa-search"></i> </button> </span>
+				Sucursal (dropdown)
+				<!-- <input type="text" class="input-sm form-control" placeholder="Buscar"> <span class="input-group-btn"> <button class="btn btn-sm btn-default" type="button"> <i class="fa fa-search"></i> </button> </span> -->
 			</div>
 		</div>
 	</div>

@@ -8,8 +8,8 @@
 			<a href="admin.php?m=stockAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Registrar Artículo </a>
 		</div>
 		<div class="col-sm-7 m-b-xs text-center">
-			<a href="admin.php?m=requisicion" class="btn btn-warning btn-sm"><i class="fa fa-shopping-cart"> Requisicion</i></a>&nbsp;
-			<a href="admin.php?m=listareq" class="btn btn-default btn-sm"><i class="fa fa-file" > Historial de Requisiciones</i></a>
+			<!-- <a href="admin.php?m=requisicion" class="btn btn-warning btn-sm"><i class="fa fa-shopping-cart"> Requisicion</i></a>&nbsp;
+			<a href="admin.php?m=listareq" class="btn btn-default btn-sm"><i class="fa fa-file" > Historial de Requisiciones</i></a> -->
 		</div>
 		<div class="col-sm-3">
 			<div class="input-group">
