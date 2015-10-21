@@ -13,7 +13,7 @@
 		</div>
 		<div class="col-sm-3">
 			<div class="input-group">
-				Sucursal (dropdown)
+				Sucursal (dropdown) cambios pronto
 				<!-- <input type="text" class="input-sm form-control" placeholder="Buscar"> <span class="input-group-btn"> <button class="btn btn-sm btn-default" type="button"> <i class="fa fa-search"></i> </button> </span> -->
 			</div>
 		</div>
@@ -27,7 +27,7 @@
 					<th>Marca</th>
 					<th>Tipo</th>
 					<th>Sucursal</th>
-					<th>Observaciones</th>camb
+					<th>Observaciones</th>
 					<th>Cantidad</th>
 					<th width="150">Precio Compra</th>
 					<th width="150">Precio Venta</th>
