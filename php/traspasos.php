@@ -27,7 +27,7 @@
 					<th>Marca</th>
 					<th>Tipo</th>
 					<th>Sucursal</th>
-					<th>Observaciones</th>
+					<th>Observaciones</th>camb
 					<th>Cantidad</th>
 					<th width="150">Precio Compra</th>
 					<th width="150">Precio Venta</th>
