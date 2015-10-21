@@ -7,7 +7,12 @@ if ( isset($_POST['nombre']) ){
 	$usuario  	= mysql_real_escape_string($_POST['usuario']);
 	$password  	= mysql_real_escape_string($_POST['password']);
 	
-	if ( mysql_query("INSERT INTO usuarios SET nombre='".$nombre."',privilegio='".$privilegio."',usuario='".$usuario."',password='".md5($password)."'") ){
+
+/*INSERT INTO usuarios (`nombre`, `login`, `tipo_usuario`,`sucursal`, `password`, `ingreso`) VALUES
+('juan manuel ahumada vazquez ', 'juanadmin' , 'admin','poniente', '1f7d060dab05ab8e2ebdbdd679046bee', '2015-09-07 23:15:58')*/
+
+
+	if ( mysql_query("INSERT INTO usuarios SET nombre='".$nombre."',login='".$usuario."',tipo_usuario='".$privilegio."',password='".md5($password)."'") ){
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Usuario agregado correctamente.
 			</div>';
@@ -42,9 +47,10 @@ if ( isset($_POST['nombre']) ){
 								<label class="col-lg-3 control-label">Tipo usuario(cargo)</label>
 								<div class="col-lg-9">
 									<select name="privilegio" id="option" class="form-control">
-										<option value="1">Administrador</option>
-										<option value="2">Secretaria</option>
-										<option value="3">Diseñador</option>
+										<option value="Administrador">Administrador</option>
+										<option value="Gerente">Gerente</option>
+										<option value="Supervisor">Supervisor</option>
+										<option value="Cajero">Cajero</option>
 									</select>
 								</div>
 							</div>

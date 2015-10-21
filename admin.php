@@ -24,8 +24,8 @@ if ( isset($_GET['m']) ){
 		case "usuariosVer":
 			$paginaPHP = "php/usuariosVer.php";
 		break;
-		case "ventas":
-			$paginaPHP = "php/ventas.php";
+		case "puntoDeVenta":
+			$paginaPHP = "php/puntoDeVenta.php";
 			break;
 		case "ventasAgregar":
 			$paginaPHP ="php/ventasAgregar.php";
@@ -36,7 +36,7 @@ if ( isset($_GET['m']) ){
 		case "stock":
 			$paginaPHP = "php/stock.php";
 			break;
-			case "stockAgregar":
+		case "stockAgregar":
 			$paginaPHP ="php/stockAgregar.php";
 			break;
 		case "traspasos":
@@ -100,11 +100,13 @@ $errorMsg = "";
 								<!-- nav -->
 								<nav class="nav-primary hidden-xs">
 									<ul class="nav">
-										<li> <a href="admin.php?m=usuarios"> <i class="fa fa-angle-right"></i> <span>Usuarios</span> </a> </li>
+										<li> <a href="admin.php?m=puntoDeVenta"> <i class="fa fa-angle-right"></i> <span>Punto de Venta</span> </a> </li>
 										<li> <a href="admin.php?m=stock"> <i class="fa fa-angle-right"></i> <span>Stock</span> </a> </li>
 										<li> <a href="admin.php?m=sucursal"> <i class="fa fa-angle-right"></i> <span>Sucursal</span> </a> </li>
 										<li> <a href="admin.php?m=traspasos"> <i class="fa fa-angle-right"></i> <span>Traspasos</span> </a> </li>
+										<li> <a href="admin.php?m=usuarios"> <i class="fa fa-angle-right"></i> <span>Usuarios</span> </a> </li>
 										<li> <a href="admin.php?m=ventas"> <i class="fa fa-angle-right"></i> <span>Ventas</span> </a> </li>
+
 											</ul>
 										</li>
 									</ul>

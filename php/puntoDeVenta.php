@@ -7,8 +7,6 @@
 			<a href="admin.php?m=ventasAgregar" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus"></i> Registrar Venta </a>
 		</div>
 		<div class="col-sm-7 m-b-xs text-center">
-
-			
 		</div>
 		<div class="col-sm-3">
 			<div class="input-group">
