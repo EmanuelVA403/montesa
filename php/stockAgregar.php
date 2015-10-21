@@ -8,6 +8,7 @@ if ( isset($_POST['articulo']) ){
 	$stock  		= mysql_real_escape_string($_POST['stock']);
 	$precio      	= mysql_real_escape_string($_POST['precio']);
 	$precioventa  	= mysql_real_escape_string($_POST['precioventa']);
+	$sucursal		= mysql_real_escape_string($_POST['sucursal']);
 	$observaciones  = mysql_real_escape_string($_POST['observaciones']);
 	$caducidad  	= mysql_real_escape_string($_POST['caducidad']);
 
@@ -22,7 +23,12 @@ insert into stock(id_producto,sucursal, cantidad) VALUES
 (1,'poniente',200)*/
 
 //stock='".$stock."',
-if ( mysql_query("INSERT INTO productos SET nombre='".$articulo."',marca='".$marca."',tipo='".$tipo."',precio_compra='".$precio."',precio_venta='".$precioventa."',observaciones='".$observaciones."'") ){
+/*echo "INSERT INTO productos SET nombre='".$articulo."',marca='".$marca."',tipo='".$tipo."',precio_compra='".$precio."',precio_venta='".$precioventa."',observaciones='".$observaciones."'";
+echo mysql_insert_id("INSERT INTO productos SET nombre='".$articulo."',marca='".$marca."',tipo='".$tipo."',precio_compra='".$precio."',precio_venta='".$precioventa."',observaciones='".$observaciones."'");*/
+echo "INSERT INTO productos SET nombre='".$articulo."',marca='".$marca."',tipo='".$tipo."',precio_compra='".$precio."',precio_venta='".$precioventa."',observaciones='".$observaciones."'";
+if (mysql_query("INSERT INTO productos SET nombre='".$articulo."',marca='".$marca."',tipo='".$tipo."',precio_compra='".$precio."',precio_venta='".$precioventa."',observaciones='".$observaciones."'") ){
+	$id = mysql_insert_id();
+	mysql_query("INSERT INTO stock SET id_producto='".$id."',sucursal='".$sucursal."',cantidad='".$stock."',caducidad='".$caducidad."'");
 	/*if ( mysql_query("INSERT INTO stock SET fecha='".date("Y-m-d")."',articulo='".$articulo."',marca='".$marca."',tipo='".$tipo."',stock='".$stock."',precio='".$precio."',precioventa='".$precioventa."',observaciones='".$observaciones."'") ){*/
 		$errorMsg = '<div class="alert alert-success">
 				<i class="fa fa-check"></i> Cliente agregado correctamente.
@@ -91,7 +97,7 @@ if ( mysql_query("INSERT INTO productos SET nombre='".$articulo."',marca='".$mar
 							<div class="form-group">
 								<label class="col-lg-3 control-label">Sucursal</label>
 								<div class="col-lg-9">
-									<select name="privilegio" id="option" class="form-control">
+									<select name="sucursal" id="option" class="form-control">
 										<option value="Norte">Norte</option>
 										<option value="Poniente">Poniente</option>
 									</select>

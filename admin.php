@@ -18,8 +18,14 @@ if ( isset($_GET['m']) ){
 		case "usuariosAgregar":
 			$paginaPHP = "php/usuariosAgregar.php";
 		break;
+		case "requisicion":
+			$paginaPHP = "php/requisicion.php";
+		break;
 		case "usuariosEditar":
 			$paginaPHP = "php/usuariosEditar.php";
+		break;
+		case "listareq":
+			$paginaPHP = "php/listareq.php";
 		break;
 		case "usuariosVer":
 			$paginaPHP = "php/usuariosVer.php";
